@@ -1,0 +1,46 @@
+/* Colours live in variables so dark mode only has to swap them. */
+:root {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --muted: #555;
+  --accent: #0063b1;
+  --card: #ffffff;
+  --border: #e2e2e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #eaeaea;
+    --muted: #a0a0a0;
+    --accent: #5aa9ff;
+    --card: #1c1c1c;
+    --border: #2e2e2e;
+  }
+}
+
+body {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 2rem 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--accent); }
+
+.tagline { color: var(--muted); margin-top: -0.5rem; }
+
+.project {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.project h3 { margin-top: 0; }
+
+footer { margin-top: 3rem; color: var(--muted); }
